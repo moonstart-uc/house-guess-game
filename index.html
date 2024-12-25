@@ -33,6 +33,41 @@
         nav a:hover {
             text-decoration: underline;
         }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: url("hero-bg.jpg") center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+        .hero .cta-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+        .hero .cta-button:hover {
+            background-color: #45a049;
+        }
+
         .container {
             margin: 20px auto;
             max-width: 900px;
@@ -111,13 +146,17 @@
         <a href="#leaderboard">Leaderboard</a>
         <a href="#about">About</a>
     </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+        <h2>Welcome to the Ultimate Real Estate Challenge</h2>
+        <p>Test your intuition and learn about current market values by guessing house prices. Sharpen your skills and avoid overpaying on your next dream home!</p>
+        <a class="cta-button" href="#houses">Start Guessing</a>
+    </div>
+
     <div class="container">
-        <div class="card">
-            <h2>Welcome to the House Price Guessing Game!</h2>
-            <p>Are you planning to buy your own house? Do you feel the real estate market is too high? Do you think it's easy to over-pay? How can we make sure to pay a reasonable price?</p>
-            <p>Let's play this house price guessing game and learn more about the market!</p>
-        </div>
-        <div class="card">
+        <!-- House Card Example -->
+        <div class="card" id="houses">
             <img src="placeholder-house.jpg" alt="House Thumbnail">
             <h2>1234 Elm Street</h2>
             <p><strong>Details:</strong> 4 Bed | 3 Bath | 2,500 sqft</p>
@@ -128,7 +167,9 @@
                 <button type="submit">Submit Guess</button>
             </form>
         </div>
-        <div class="card leaderboard">
+
+        <!-- Leaderboard Section -->
+        <div class="card leaderboard" id="leaderboard">
             <h2>Leaderboard</h2>
             <ul>
                 <li><strong>User1:</strong> $500,000 (Closest Guess)</li>
@@ -137,6 +178,7 @@
             </ul>
         </div>
     </div>
+    
     <footer>
         &copy; 2024 House Price Guessing Game. All Rights Reserved.
     </footer>
